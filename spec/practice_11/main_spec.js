@@ -145,7 +145,7 @@ describe("Class", () => {
             expect(spy.calledWith("It is not one of us.")).to.be.ok;
         });
 
-        it("should notify assign leader listeners", () => {
+        it("should notifyMemberJoined assign leader listeners", () => {
             const klass = new Class(2);
             const otherKlass = new Class(3);
             const student = new Student(1, "Jerry", 21, klass);
@@ -172,7 +172,7 @@ describe("Class", () => {
             expect(student.klass).to.equal(klass);
         });
 
-        it("should notify join listeners", () => {
+        it("should notifyMemberJoined join listeners", () => {
             const klass = new Class(2);
             const otherKlass = new Class(3);
             const teacher = new Teacher(1, "Tom", 21, [klass, otherKlass]);
